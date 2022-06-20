@@ -92,7 +92,7 @@ def setup_s3(dotenv_filename=".s3cfg", gcloud_project_id=None, gcloud_storage_pa
     import s3fs
     
     
-    if os.environ['INOVALIFE_ENV'] != 'true':
+    if os.environ.get('INOVALIFE_ENV') != 'true':
         envsetup(dotenv_filename, gcloud_project_id=None, gcloud_storage_path=None)
     
     return s3fs.S3FileSystem(
@@ -119,6 +119,9 @@ def setup_spark(dotenv_filename=".s3cfg", gcloud_project_id=None, gcloud_storage
     """
     from pyspark.sql import SparkSession
     
+    
+    if os.environ.get('INOVALIFE_ENV') != 'true':
+        envsetup(dotenv_filename, gcloud_project_id=None, gcloud_storage_path=None)
     
     return (SparkSession
         .builder
