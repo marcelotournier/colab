@@ -6,5 +6,7 @@ numpy>=1.21.6
 matplotlib>=3.2.2
 xgboost>=0.90
 tensorflow>=2.8.2
-papermill==2.0.0
+papermill>=2.3.4
+tornado~=5.1.0
+click<8.0,>=5.1
 scikit_learn>=1.0.2
