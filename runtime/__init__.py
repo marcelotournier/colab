@@ -55,3 +55,4 @@ Setup the working environment either in Google colab or in another machine.
     os.environ['S3_ENDPOINT_URL'] = 'https://' + config['default']['host_base']
     os.environ['S3_REGION_NAME'] = config['default']['bucket_location']
     os.environ['GITHUB_TOKEN'] = config['github']['token']
+    os.environ['INOVALIFE_ENV'] = 'true'
