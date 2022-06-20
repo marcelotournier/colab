@@ -7,4 +7,4 @@ matplotlib>=3.2.2
 xgboost>=0.90
 tensorflow>=2.8.2
 papermill>=2.3.4
-scikitlearn>=1.0.2
+scikit_learn>=1.0.2
