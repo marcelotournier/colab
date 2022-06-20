@@ -10,3 +10,4 @@ scikit_learn>=1.0.2
 papermill
 tornado~=5.1.0
 folium==0.2.1
+jupyter-client==5.3.5
