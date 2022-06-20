@@ -7,8 +7,11 @@ matplotlib>=3.2.2
 xgboost>=0.90
 tensorflow>=2.8.2
 scikit_learn>=1.0.2
-papermill
+papermill==1.2.1
 tornado~=5.1.0
 folium==0.2.1
 jupyter-client==5.3.5
 click<8.0,>=5.1
+tqdm==4.32.2
+ansiwrap==0.8.4
+urllib3==1.25.11
