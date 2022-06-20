@@ -36,7 +36,7 @@ def envsetup(dotenv_filename=".s3cfg", gcloud_project_id=None, gcloud_storage_pa
         os.system(f"gcloud config set project {gcloud_project_id}")
 
         # Push keys from gcloud file and put in the right path for s3cmd to work
-        dotenv_path = '/root/{dotenv_filename}'
+        dotenv_path = f'/root/{dotenv_filename}'
         cmd = f"gsutil cp {gcloud_storage_path}/{dotenv_filename} {dotenv_path}"
         os.system(cmd)
 
