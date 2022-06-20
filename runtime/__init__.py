@@ -93,7 +93,7 @@ def setup_s3(dotenv_filename=".s3cfg", gcloud_project_id=None, gcloud_storage_pa
     
     
     if os.environ.get('INOVALIFE_ENV') != 'true':
-        envsetup(dotenv_filename, gcloud_project_id=None, gcloud_storage_path=None)
+        envsetup(dotenv_filename, gcloud_project_id, gcloud_storage_path)
     
     return s3fs.S3FileSystem(
         key=os.environ['S3_ACCESS_KEY'],
@@ -121,7 +121,7 @@ def setup_spark(dotenv_filename=".s3cfg", gcloud_project_id=None, gcloud_storage
     
     
     if os.environ.get('INOVALIFE_ENV') != 'true':
-        envsetup(dotenv_filename, gcloud_project_id=None, gcloud_storage_path=None)
+        envsetup(dotenv_filename, gcloud_project_id, gcloud_storage_path)
     
     return (SparkSession
         .builder
