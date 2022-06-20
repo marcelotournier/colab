@@ -13,4 +13,3 @@ scikit_learn>=1.0.2
 jupyter-client==5.3.5
 kiwisolver==1.0.1
 multidict==4.5.0
-nbclient==0.2.0
