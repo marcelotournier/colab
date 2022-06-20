@@ -14,17 +14,17 @@ import configparser
 
 
 def envsetup(dotenv_filename=".s3cfg", gcloud_project_id=None, gcloud_storage_path=None):
-"""
-Setup the working environment either in Google colab or in another machine.
+    """
+    Setup the working environment either in Google colab or in another machine.
 
-# NOTE: I USE DIGITAL OCEAN SPACES "S3-LIKE" OBJECT STORAGE. 
-# This setup is to work with this kind of storage.
-# Check their documentation at https://www.digitalocean.com/products/spaces
+    # NOTE: I USE DIGITAL OCEAN SPACES "S3-LIKE" OBJECT STORAGE. 
+    # This setup is to work with this kind of storage.
+    # Check their documentation at https://www.digitalocean.com/products/spaces
 
-:param str dotenv_filename: The name of the dotenv file with secrets
-:param str gcloud_project_id: The google cloud project_id name
-:param str gcloud_storage_path: The gcloud storage bucket path e.g. "gs://my-storage-path"
-"""
+    :param str dotenv_filename: The name of the dotenv file with secrets
+    :param str gcloud_project_id: The google cloud project_id name
+    :param str gcloud_storage_path: The gcloud storage bucket path e.g. "gs://my-storage-path"
+    """
     # This will run only in colab notebooks:
     if "google.colab" in sys.modules:
         # Get into the account.
