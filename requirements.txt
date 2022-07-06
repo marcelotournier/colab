@@ -11,7 +11,7 @@ scikit_learn>=1.0.2
 papermill==1.2.1
 tornado~=5.1.0
 folium==0.2.1
-jupyter-client==5.3.5
+jupyter-client==5.3.5; platform_machine != 'aarch64'
 click<8.0,>=5.1
 ansiwrap==0.8.4
 urllib3==1.25.11
