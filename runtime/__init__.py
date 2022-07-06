@@ -92,8 +92,9 @@ def setup_s3(dotenv_filename=".s3cfg", gcloud_project_id=None, gcloud_storage_pa
     import s3fs
     
     
-    if os.environ.get('INOVALIFE_ENV') != 'true':
-        envsetup(dotenv_filename, gcloud_project_id, gcloud_storage_path)
+    if "google.colab" not in sys.modules:
+        # default out of colab will pull dotfile from $HOME/$dotenv_filename
+        envsetup(os.path.join(os.environ['HOME'], dotenv_filename))
     
     return s3fs.S3FileSystem(
         key=os.environ['S3_ACCESS_KEY'],
@@ -120,8 +121,9 @@ def setup_spark(dotenv_filename=".s3cfg", gcloud_project_id=None, gcloud_storage
     from pyspark.sql import SparkSession
     
     
-    if os.environ.get('INOVALIFE_ENV') != 'true':
-        envsetup(dotenv_filename, gcloud_project_id, gcloud_storage_path)
+    if "google.colab" not in sys.modules:
+        # default out of colab will pull dotfile from $HOME/$dotenv_filename
+        envsetup(os.path.join(os.environ['HOME'], dotenv_filename))
     
     return (SparkSession
         .builder
